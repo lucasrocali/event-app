@@ -6,35 +6,39 @@ import { iOSUIKit } from "react-native-typography"
 import themes from '../utils/themes'
 
 const Container = styled.ScrollView`
-    padding-vertical: 50;
+    padding-vertical: 50px;
 `;
 
 const CompContainer = styled.View`
-    background-color: ${props => props.theme.bgPrimary};
-    padding-vertical: 20;
+
+`
+
+const CompContent = styled.View`
+    background-color: ${props => props.theme.bgPrimaryColor};
+    padding-vertical: 20px;
 `
 
 const StateCompContainer = styled.View`
-    padding-vertical: 20;
+    padding-vertical: 20px;
 `
 
 const Title = styled.Text`
     ${iOSUIKit.title3EmphasizedObject};
     text-align: center;
-    color: ${props => props.theme.lblPrimary};
+    color: ${props => props.theme.lblPrimaryColor};
 `
 
 const Descp = styled.Text`
     ${iOSUIKit.bodyObject};
     text-align: center;
-    color: ${props => props.theme.lblPrimary};
+    color: ${props => props.theme.lblPrimaryColor};
 `
 
 export default function Library() {
 
     function renderStateComponent(key, component) {
         return (
-            <StateCompContainer>
+            <StateCompContainer key={key}>
                 <Descp>{key}</Descp>
                 {component}
             </StateCompContainer>
@@ -43,20 +47,20 @@ export default function Library() {
 
     function renderComponentt(key, component) {
         return (
-            <>
+            <CompContainer key={key}>
                 <ThemeProvider theme={themes.light}>
-                    <CompContainer>
+                    <CompContent>
                         <Title>{key}</Title>
                         {Object.keys(component.states).map((key) => renderStateComponent(key, component.states[key]))}
-                    </CompContainer>
+                    </CompContent>
                 </ThemeProvider>
                 <ThemeProvider theme={themes.dark}>
-                    <CompContainer>
+                    <CompContent>
                         <Title>{key}</Title>
                         {Object.keys(component.states).map((key) => renderStateComponent(key, component.states[key]))}
-                    </CompContainer>
+                    </CompContent>
                 </ThemeProvider>
-            </>
+            </CompContainer>
         )
     }
 

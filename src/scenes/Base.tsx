@@ -6,7 +6,7 @@ const Container = styled.View`
   flex: 1;
   align-items: center;
   justify-content: center;
-  background-color: ${props => props.theme.bgPrimary};
+  background-color: ${props => props.theme.bgPrimaryColor};
 `
 
 export default function Base() {

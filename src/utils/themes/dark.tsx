@@ -1,6 +1,5 @@
-import { materialColors } from 'react-native-typography'
-
 export default {
-    bgPrimary: materialColors.blackPrimary,
-    lblPrimary: materialColors.whitePrimary
+    bgPrimaryColor: '#222',
+    bgSecondaryColor: '#333',
+    lblPrimaryColor: '#FFF'
 }

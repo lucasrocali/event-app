@@ -8,7 +8,7 @@ const Container = styled.View`
 
 const Text = styled.Text`
     ${iOSUIKit.largeTitleEmphasizedObject};
-    color: ${props => props.theme.lblPrimary};
+    color: ${props => props.theme.lblPrimaryColor};
 `
 
 export default function Base() {
