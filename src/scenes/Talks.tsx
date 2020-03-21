@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components/native'
 import BaseComp from '../components/Base'
 
-const View = styled.View`
+const Container = styled.View`
   flex: 1;
   align-items: center;
   justify-content: center;
@@ -11,8 +11,8 @@ const View = styled.View`
 
 export default function Base() {
     return (
-        <View>
+        <Container>
             <BaseComp />
-        </View>
+        </Container>
     );
 }

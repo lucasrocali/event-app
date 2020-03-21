@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components/native'
-import { iOSUIKit } from "react-native-typography";
+import { iOSUIKit } from "react-native-typography"
 
-const View = styled.View`
+const Container = styled.View`
 
 `
 
@@ -13,8 +13,8 @@ const Text = styled.Text`
 
 export default function Base() {
     return (
-        <View>
+        <Container>
             <Text>Base Comp</Text>
-        </View>
+        </Container>
     );
 }
