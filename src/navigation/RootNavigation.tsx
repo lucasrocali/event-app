@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import screenNames from './screenNames'
 import Base from '../scenes/Base'
-import Home from '../scenes/Home'
+import Talks from '../scenes/Talks'
 const Stack = createStackNavigator()
 
 const View = styled.View`
@@ -22,7 +22,7 @@ export default function App() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name={screenNames.Home} component={Home} />
+                <Stack.Screen name={screenNames.Talks} component={Talks} />
                 <Stack.Screen name={screenNames.Base} component={Base} />
             </Stack.Navigator>
         </NavigationContainer>
