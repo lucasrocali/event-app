@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Base from './Base'
 import TalkCard from './TalkCard'
-import { talks } from '../utils/constants'
+import { talks } from '../utils/mocks'
 
 const Library = {
     Base: {

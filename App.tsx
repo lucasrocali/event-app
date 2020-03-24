@@ -1,5 +1,5 @@
 import React from 'react';
-import RootNavigation from './src/navigation/RootNavigation'
+import RootNavigation from './src/navigation'
 import { ThemeProvider } from 'styled-components/native';
 import { Appearance, AppearanceProvider, useColorScheme } from 'react-native-appearance';
 import themes from './src/utils/themes'

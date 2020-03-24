@@ -7,6 +7,8 @@ import spacing from '../utils/spacing';
 const Container = styled.TouchableOpacity`
     padding-vertical: ${spacing.small};
     padding-horizontal: ${spacing.small};
+    border-bottom-width: 1;
+    border-color: ${props => props.theme.bgSecondaryColor};
 `
 
 const TalkName = styled.Text`
@@ -38,13 +40,14 @@ const Body = styled.View`
 `
 
 type TalkCardProps = {
-    talk: Talk
+    talk: Talk,
+    onPress?: Function
 }
 
 export default function TalkCard(props: TalkCardProps) {
-    const { talk } = props
+    const { talk, onPress } = props
     return (
-        <Container activeOpacity={0.8}>
+        <Container activeOpacity={0.8} onPress={() => onPress && onPress()}>
             <Row>
                 <Image />
                 <Body>
