@@ -7,7 +7,7 @@ import { RootStackParamList } from '../utils/types';
 
 const Container = styled.ScrollView`
   flex: 1;
-  background-color: ${props => props.theme.bgPrimaryColor};
+  background-color: ${(props: Styled) => props.theme.color.bgPrimary};
 `
 
 type TalkDetailScreenNavigationProp = StackNavigationProp<

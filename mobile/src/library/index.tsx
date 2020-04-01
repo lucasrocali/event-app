@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components/native';
 import components from '../components'
 import { iOSUIKit } from "react-native-typography"
 import themes from '../utils/themes'
+import { Styled } from '../utils/types'
 
 const Container = styled.ScrollView`
     padding-vertical: 50px;
@@ -14,7 +15,7 @@ const CompContainer = styled.View`
 `
 
 const CompContent = styled.View`
-    background-color: ${props => props.theme.bgPrimaryColor};
+    background-color: ${(props: Styled) => props.theme.color.bgPrimary};
     padding-vertical: 20px;
 `
 
@@ -25,13 +26,13 @@ const StateCompContainer = styled.View`
 const Title = styled.Text`
     ${iOSUIKit.title3EmphasizedObject};
     text-align: center;
-    color: ${props => props.theme.lblPrimaryColor};
+    color: ${(props: Styled) => props.theme.color.lblPrimary};
 `
 
 const Descp = styled.Text`
     ${iOSUIKit.bodyObject};
     text-align: center;
-    color: ${props => props.theme.lblPrimaryColor};
+    color: ${(props: Styled) => props.theme.color.lblPrimary};
 `
 
 export default function Library() {

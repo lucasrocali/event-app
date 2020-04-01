@@ -2,25 +2,29 @@ import light from './light'
 import dark from './dark'
 
 const spacing = {
-    spacingTiny: '8px',
-    spacingSmall: '12px',
-    spacingMedium: '16px',
-    spacingLarge: '22px'
+    tiny: '8px',
+    small: '12px',
+    medium: '16px',
+    large: '22px'
 }
 
 const baseColors = {
-    primaryColor: '#3398db'
+    primary: '#3398db'
 }
 
 export default {
     light: {
-        ...light,
-        ...baseColors,
-        ...spacing
+        color: {
+            ...light,
+            ...baseColors,
+        },
+        spacing
     },
     dark: {
-        ...dark,
-        ...baseColors,
-        ...spacing
+        color: {
+            ...dark,
+            ...baseColors,
+        },
+        spacing
     },
 }

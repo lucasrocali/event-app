@@ -1,35 +1,33 @@
 import React from 'react'
 import styled from 'styled-components/native'
 import { iOSUIKit } from "react-native-typography"
-import { Talk } from '../utils/types';
+import { Talk, Styled } from '../utils/types';
 
 const Container = styled.TouchableOpacity`
-    padding-vertical: ${props => props.theme.spacingSmall};
-    padding-horizontal: ${props => props.theme.spacingSmall};
-    border-bottom-width: 1;
-    border-color: ${props => props.theme.bgSecondaryColor};
+    padding-vertical: ${(props: Styled) => props.theme.spacing.small};
+    padding-horizontal: ${(props: Styled) => props.theme.spacing.small};
 `
 
 const TalkName = styled.Text`
     ${iOSUIKit.largeTitleEmphasizedObject};
-    color: ${props => props.theme.lblPrimaryColor};
+    color: ${(props: Styled) => props.theme.color.lblPrimary};
 `
 
 const SpeakerName = styled.Text`
     ${iOSUIKit.subheadObject};
-    color: ${props => props.theme.lblPrimaryColor};
-    margin-top: ${props => props.theme.spacingSmall};
+    color: ${(props: Styled) => props.theme.color.lblPrimary};
+    margin-top: ${(props: Styled) => props.theme.spacing.small};
 `
 
 const Time = styled.Text`
     ${iOSUIKit.subheadObject};
-    color: ${props => props.theme.lblPrimaryColor};
+    color: ${(props: Styled) => props.theme.color.lblPrimary};
 `
 
 const Descp = styled.Text`
     ${iOSUIKit.bodyObject};
-    color: ${props => props.theme.lblPrimaryColor};
-    margin-top: ${props => props.theme.spacingSmall};
+    color: ${(props: Styled) => props.theme.color.lblPrimary};
+    margin-top: ${(props: Styled) => props.theme.spacing.small};
 `
 
 const Row = styled.View`
@@ -38,11 +36,11 @@ const Row = styled.View`
 
 const Image = styled.Image`
     height: 400px;
-    background-color: ${props => props.theme.bgSecondaryColor};
+    background-color: ${(props: Styled) => props.theme.color.bgSecondary};
 `
 const Body = styled.View`
-    padding-horizontal: ${props => props.theme.spacingSmall};
-    padding-vertical: ${props => props.theme.spacingSmall};
+    padding-horizontal: ${(props: Styled) => props.theme.spacing.small};
+    padding-vertical: ${(props: Styled) => props.theme.spacing.small};
 `
 
 type TalkCardProps = {

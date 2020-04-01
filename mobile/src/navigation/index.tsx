@@ -30,8 +30,8 @@ export default function Navigation(props: NavigationProps) {
                 initialRouteName={"TalkList"}
                 screenOptions={{
                     gestureEnabled: false,
-                    headerTintColor: theme.lblPrimaryColor,
-                    headerStyle: { backgroundColor: theme.bgPrimaryColor }
+                    headerTintColor: theme.color.lblPrimary,
+                    headerStyle: { backgroundColor: theme.color.bgPrimary }
                 }}
             >
                 <Stack.Screen

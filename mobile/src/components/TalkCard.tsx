@@ -1,28 +1,28 @@
 import React from 'react'
 import styled from 'styled-components/native'
 import { iOSUIKit } from "react-native-typography"
-import { Talk } from '../utils/types';
+import { Talk, Styled } from '../utils/types';
 
 const Container = styled.TouchableOpacity`
-    padding-vertical: ${props => props.theme.spacingSmall};
-    padding-horizontal: ${props => props.theme.spacingSmall};
+    padding-vertical: ${(props: Styled) => props.theme.spacing.small};
+    padding-horizontal: ${(props: Styled) => props.theme.spacing.small};
     border-bottom-width: 1;
-    border-color: ${props => props.theme.bgSecondaryColor};
+    border-color: ${(props: Styled) => props.theme.color.bgSecondary};
 `
 
 const TalkName = styled.Text`
     ${iOSUIKit.calloutObject};
-    color: ${({ theme }) => theme.lblPrimaryColor};
+    color: ${(props: Styled) => props.theme.color.lblPrimary};
 `
 
 const SpeakerName = styled.Text`
     ${iOSUIKit.footnoteObject};
-    color: ${props => props.theme.lblPrimaryColor};
+    color: ${(props: Styled) => props.theme.color.lblPrimary};
 `
 
 const Time = styled.Text`
     ${iOSUIKit.footnoteEmphasizedObject};
-    color: ${props => props.theme.lblPrimaryColor};
+    color: ${(props: Styled) => props.theme.color.lblPrimary};
 `
 const Row = styled.View`
     flex-direction: row;
@@ -31,11 +31,11 @@ const Row = styled.View`
 const Image = styled.Image`
     width: 60px;
     height: 60px;
-    background-color: ${props => props.theme.bgSecondaryColor};
+    background-color: ${(props: Styled) => props.theme.color.bgSecondary};
 `
 const Body = styled.View`
     flex: 1;
-    padding-left: ${props => props.theme.spacingSmall};
+    padding-left: ${(props: Styled) => props.theme.spacing.small};
 `
 
 type TalkCardProps = {

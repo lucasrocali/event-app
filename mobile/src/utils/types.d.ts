@@ -22,12 +22,20 @@ export type RootStackParamList = {
 };
 
 export type Theme = {
-    bgPrimaryColor: string,
-    bgSecondaryColor: string,
-    lblPrimaryColor: string,
-    primaryColor: string,
-    spacingTiny: string,
-    spacingSmall: string,
-    spacingMedium: string,
-    spacingLarge: string
+    color: {
+        bgPrimary: string,
+        bgSecondary: string,
+        lblPrimary: string,
+        primary: string,
+    }
+    spacing: {
+        tiny: string,
+        small: string,
+        medium: string,
+        large: string
+    }
+}
+
+export type Styled = {
+    theme: Theme
 }
