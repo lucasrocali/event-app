@@ -1,5 +1,6 @@
 export default {
     bgPrimaryColor: '#FFF',
     bgSecondaryColor: '#EEE',
-    lblPrimaryColor: '#000'
+    lblPrimaryColor: '#000',
+    primaryColor: '#2050FF'
 }

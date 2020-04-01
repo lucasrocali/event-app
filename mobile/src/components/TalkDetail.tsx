@@ -11,31 +11,38 @@ const Container = styled.TouchableOpacity`
 `
 
 const TalkName = styled.Text`
-    ${iOSUIKit.calloutObject};
+    ${iOSUIKit.largeTitleEmphasizedObject};
     color: ${props => props.theme.lblPrimaryColor};
 `
 
 const SpeakerName = styled.Text`
-    ${iOSUIKit.footnoteObject};
+    ${iOSUIKit.subheadObject};
     color: ${props => props.theme.lblPrimaryColor};
+    margin-top: ${props => props.theme.spacingSmall};
 `
 
 const Time = styled.Text`
-    ${iOSUIKit.footnoteEmphasizedObject};
+    ${iOSUIKit.subheadObject};
     color: ${props => props.theme.lblPrimaryColor};
 `
+
+const Descp = styled.Text`
+    ${iOSUIKit.bodyObject};
+    color: ${props => props.theme.lblPrimaryColor};
+    margin-top: ${props => props.theme.spacingSmall};
+`
+
 const Row = styled.View`
     flex-direction: row;
 `
 
 const Image = styled.Image`
-    width: 60px;
-    height: 60px;
+    height: 400px;
     background-color: ${props => props.theme.bgSecondaryColor};
 `
 const Body = styled.View`
-    flex: 1;
-    padding-left: ${props => props.theme.spacingSmall};
+    padding-horizontal: ${props => props.theme.spacingSmall};
+    padding-vertical: ${props => props.theme.spacingSmall};
 `
 
 type TalkCardProps = {
@@ -47,14 +54,13 @@ export default function TalkCard(props: TalkCardProps) {
     const { talk, onPress } = props
     return (
         <Container activeOpacity={0.8} onPress={() => onPress && onPress()}>
-            <Row>
-                <Image />
-                <Body>
-                    <TalkName numberOfLines={2}>{talk.name}</TalkName>
-                    <SpeakerName numberOfLines={1}>{talk.speaker.name}</SpeakerName>
-                    <Time numberOfLines={1}>{talk.time}</Time>
-                </Body>
-            </Row>
+            <Image />
+            <Body>
+                <TalkName numberOfLines={2}>{talk.name}</TalkName>
+                <SpeakerName numberOfLines={1}>{talk.speaker.name}</SpeakerName>
+                <Time numberOfLines={1}>{talk.time}</Time>
+                <Descp numberOfLines={20}>{talk.descp}</Descp>
+            </Body>
         </Container>
     );
 }

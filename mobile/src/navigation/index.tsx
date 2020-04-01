@@ -3,8 +3,8 @@ import React from 'react'
 import styled from 'styled-components/native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import Talks from '../scenes/Talks'
-import TalkDetail from '../scenes/TalkDetail';
+import TalkList from '../scenes/TalkList'
+import Talk from '../scenes/Talk';
 import { RootStackParamList } from '../utils/types';
 
 const Stack = createStackNavigator<RootStackParamList>()
@@ -22,14 +22,14 @@ const Text = styled.Text`
 export default function Navigation() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName={"Talks"}>
+            <Stack.Navigator initialRouteName={"TalkList"} screenOptions={{ gestureEnabled: false }}>
                 <Stack.Screen
-                    name={"Talks"}
-                    component={Talks}
+                    name={"TalkList"}
+                    component={TalkList}
                 />
                 <Stack.Screen
-                    name={"TalkDetail"}
-                    component={TalkDetail}
+                    name={"Talk"}
+                    component={Talk}
                     options={({ route }) => ({ title: route.params && route.params.talk && route.params.talk.name || '' })}
                 />
             </Stack.Navigator>

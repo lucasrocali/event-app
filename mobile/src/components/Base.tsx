@@ -11,7 +11,9 @@ const Text = styled.Text`
     color: ${props => props.theme.lblPrimaryColor};
 `
 
-export default function Base() {
+type BaseProps = {}
+
+export default function Base(props: BaseProps) {
     return (
         <Container>
             <Text>Base Comp</Text>

@@ -1,7 +1,7 @@
 export const talks = {
     awesome: {
         name: 'Awesome talk 1',
-        descp: 'Awesome descp',
+        descp: 'Vestibulum faucibus ullamcorper vehicula. Pellentesque vitae arcu urna. Vestibulum tempus consequat sem, ac pharetra ipsum scelerisque eu. Sed ac massa facilisis, aliquam metus at, pulvinar ex. ',
         time: '10:00',
         speaker: {
             name: 'Awesome speaker',
@@ -20,3 +20,14 @@ export const talks = {
         }
     }
 }
+
+export const days = [
+    {
+        order: '1',
+        name: 'April 1'
+    },
+    {
+        order: '2',
+        name: 'April 2'
+    }
+]

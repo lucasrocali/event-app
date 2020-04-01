@@ -7,10 +7,16 @@ export type Speaker = {
 export type Talk = {
     name: string,
     time: string,
+    descp: string,
     speaker: Speaker
 }
 
+export type Day = {
+    order: string,
+    name: string
+}
+
 export type RootStackParamList = {
-    Talks: undefined;
-    TalkDetail: { talk: Talk };
+    TalkList: undefined;
+    Talk: { talk: Talk };
 };

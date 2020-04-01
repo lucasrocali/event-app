@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Base from './Base'
 import TalkCard from './TalkCard'
+import TalkDetail from './TalkDetail'
 import { talks } from '../utils/mocks'
 
 const Library = {
@@ -15,9 +16,15 @@ const Library = {
             awesome: <TalkCard talk={talks.awesome} />,
             largeTitle: <TalkCard talk={talks.largeTitle} />
         }
+    },
+    TalkDetail: {
+        states: {
+            awesome: <TalkDetail talk={talks.awesome} />,
+            largeTitle: <TalkDetail talk={talks.largeTitle} />
+        }
     }
 }
 
 export default {
-    TalkCard: Library.TalkCard
+    TalkDetail: Library.TalkDetail
 }

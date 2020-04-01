@@ -2,19 +2,19 @@ import React from 'react';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
 import styled from 'styled-components/native'
-import TalkCard from '../components/TalkCard';
+import TalkDetail from '../components/TalkDetail';
 import { RootStackParamList } from '../utils/types';
 
-const Container = styled.View`
+const Container = styled.ScrollView`
   flex: 1;
   background-color: ${props => props.theme.bgPrimaryColor};
 `
 
 type TalkDetailScreenNavigationProp = StackNavigationProp<
     RootStackParamList,
-    'TalkDetail'
+    'Talk'
 >;
-type TalkDetailScreenRouteProp = RouteProp<RootStackParamList, 'TalkDetail'>;
+type TalkDetailScreenRouteProp = RouteProp<RootStackParamList, 'Talk'>;
 
 type TalkDetailProps = {
     navigation: TalkDetailScreenNavigationProp,
@@ -22,13 +22,13 @@ type TalkDetailProps = {
 };
 
 
-export default function TalkDetail(props: TalkDetailProps) {
+export default function Talk(props: TalkDetailProps) {
     const { route } = props
     console.log(route)
     const { params: { talk } } = route
     return (
         <Container>
-            <TalkCard talk={talk} />
+            <TalkDetail talk={talk} />
         </Container>
     );
 }
