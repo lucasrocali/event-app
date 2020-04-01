@@ -4,7 +4,6 @@ import { ThemeProvider } from 'styled-components/native';
 import { Appearance, AppearanceProvider, useColorScheme } from 'react-native-appearance';
 import themes from './src/utils/themes'
 import Library from './src/library'
-import { YellowBox } from 'react-native';
 console.disableYellowBox = true
 
 export default function App() {
@@ -19,7 +18,7 @@ export default function App() {
   return (
     <AppearanceProvider>
       <ThemeProvider theme={theme}>
-        <RootNavigation />
+        <RootNavigation theme={theme} />
       </ThemeProvider>
     </AppearanceProvider>
   );

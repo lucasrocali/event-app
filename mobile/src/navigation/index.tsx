@@ -3,9 +3,9 @@ import React from 'react'
 import styled from 'styled-components/native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import TalkList from '../scenes/TalkList'
-import Talk from '../scenes/Talk';
-import { RootStackParamList } from '../utils/types';
+import TalkList from '../containers/TalkList'
+import Talk from '../containers/Talk';
+import { RootStackParamList, Theme } from '../utils/types';
 
 const Stack = createStackNavigator<RootStackParamList>()
 
@@ -18,11 +18,22 @@ const View = styled.View`
 const Text = styled.Text`
 
 `
+type NavigationProps = {
+    theme: Theme
+}
 
-export default function Navigation() {
+export default function Navigation(props: NavigationProps) {
+    const { theme } = props
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName={"TalkList"} screenOptions={{ gestureEnabled: false }}>
+            <Stack.Navigator
+                initialRouteName={"TalkList"}
+                screenOptions={{
+                    gestureEnabled: false,
+                    headerTintColor: theme.lblPrimaryColor,
+                    headerStyle: { backgroundColor: theme.bgPrimaryColor }
+                }}
+            >
                 <Stack.Screen
                     name={"TalkList"}
                     component={TalkList}

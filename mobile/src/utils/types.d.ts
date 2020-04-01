@@ -20,3 +20,14 @@ export type RootStackParamList = {
     TalkList: undefined;
     Talk: { talk: Talk };
 };
+
+export type Theme = {
+    bgPrimaryColor: string,
+    bgSecondaryColor: string,
+    lblPrimaryColor: string,
+    primaryColor: string,
+    spacingTiny: string,
+    spacingSmall: string,
+    spacingMedium: string,
+    spacingLarge: string
+}

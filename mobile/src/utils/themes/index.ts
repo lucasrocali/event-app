@@ -8,13 +8,19 @@ const spacing = {
     spacingLarge: '22px'
 }
 
+const baseColors = {
+    primaryColor: '#3398db'
+}
+
 export default {
     light: {
         ...light,
+        ...baseColors,
         ...spacing
     },
     dark: {
         ...dark,
+        ...baseColors,
         ...spacing
     },
 }

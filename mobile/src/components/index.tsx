@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Base from './Base'
 import TalkCard from './TalkCard'
 import TalkDetail from './TalkDetail'
-import { talks } from '../utils/mocks'
+import DayToggle from './DayToggle'
+import { talks, days } from '../utils/mocks'
 
 const Library = {
     Base: {
@@ -22,9 +23,15 @@ const Library = {
             awesome: <TalkDetail talk={talks.awesome} />,
             largeTitle: <TalkDetail talk={talks.largeTitle} />
         }
+    },
+    DayToggle: {
+        states: {
+            default2: <DayToggle days={days} selectedDay={days[0]} />,
+            default3: <DayToggle days={[...days, days[1]]} selectedDay={days[0]} />
+        }
     }
 }
 
 export default {
-    TalkDetail: Library.TalkDetail
+    DayToggle: Library.DayToggle
 }

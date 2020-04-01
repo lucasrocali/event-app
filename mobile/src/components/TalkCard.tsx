@@ -12,7 +12,7 @@ const Container = styled.TouchableOpacity`
 
 const TalkName = styled.Text`
     ${iOSUIKit.calloutObject};
-    color: ${props => props.theme.lblPrimaryColor};
+    color: ${({ theme }) => theme.lblPrimaryColor};
 `
 
 const SpeakerName = styled.Text`
