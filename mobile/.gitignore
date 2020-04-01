@@ -10,11 +10,5 @@ npm-debug.*
 web-build/
 web-report/
 
-*.jsbundle
-*.tsbuildinfo
+# macOS
 .DS_Store
-.history
-.jest
-.vscode
-Pods
-yarn-error.log
